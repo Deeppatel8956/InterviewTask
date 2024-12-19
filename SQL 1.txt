@@ -1,0 +1,16 @@
+CREATE DATABASE temp;
+
+*use for table
+USE temp;
+
+*Table
+CREATE TABLE STUDENT(
+ id INT PRIMARY KEY;
+name VARCHAR(50);
+age INT NOT NULL;
+)
+
+INSERT INTO student VALUES(10,"god",20)
+INSERT INTO student VALUES(10,"dog",28)
+
+SELECT * FROM student;
