@@ -1,0 +1,17 @@
+CRAETE DATABASE coo;
+
+USE coo;
+
+CREATE TABLE ad(
+id INT PRIMARY KEY,
+name VARCHAR (20),
+sub INT,
+)
+
+INSERT INTO ad
+(id,name,sub)
+VALUSE 
+(10,"gh",200)
+(10,"gh",200)(10,"gh",200)(10,"gh",200)
+
+SELECT name ,sub FROM ad;
