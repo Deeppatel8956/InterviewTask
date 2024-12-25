@@ -1,0 +1,31 @@
+CREATE DATBASE cod;
+
+USE cod;
+
+
+CREATE TABLE dog(
+name VARCHAR(100),
+id INT PRIMARY KEY,
+age INT,
+mark INT);
+
+INSERT INTO dog
+(name, id, mark,age)
+VALUES
+("D",1,20,70),
+("W",1,20,70),("E",1,20,70),("G",1,20,70),("H",1,20,70)
+
+
+SELECT * FROM dog WHERE NAME="D" AND mark > 10;
+
+(BETWEEN select for range)
+SELECT * FROM dog WHERE mark BETWEEN 10 AND 20;
+
+(IN matches any value in the list)
+SELECT * FROM dog WHERE name IN ("D", "G");
+
+(NOT to negate the given condition)
+SELECT * FROM dog WHERE name NOT IN ("D", "G");
+
+(LIMIT range)
+SELECT * FROM dog WHERE age > 10 LIMIT 3;
