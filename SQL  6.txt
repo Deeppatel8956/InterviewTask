@@ -1,0 +1,28 @@
+CREATE TABLE dog(
+name VARCHAR(100),
+id INT PRIMARY KEY,
+age INT,
+mark INT);
+
+INSERT INTO dog
+(name, id, mark,age)
+VALUES
+("D",7,20,70),
+("W",10,20,70),("E",9,20,70),("G",8,20,70),("H",3,20,70);
+
+SELECT * FROM dog ORDER BY mark ASC;
+
+(MAX)
+(COUNT)
+(AVG)
+(MIN)
+(SUM)
+
+SELECT SUM(mark) FROM dog;
+
+(GROUP BY Cause)
+SELECT mark, COUNT(id)
+FROM 
+GROUP BY mark;
+HAVING max(mark),
+ORDER BY COUNT(id) ASC; 
