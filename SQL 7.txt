@@ -1,0 +1,27 @@
+CREATE DATBASE bol;
+
+USE bol;
+
+CREATE TABLE tc(
+ID INT PRIMARY KEY,
+mark INT,
+sub VARCHAR(50)
+);
+
+INSERT INTO tc
+(ID,mark,sub)
+VALUES(1,80,"A"),
+(2,90,"U"),
+(3,100,"N")
+
+(SQL UPADTE STATEMENT)
+
+UPDATE tc
+SET mark=mark+1
+WHERE mark BETWEEN 80 AND 90;
+
+SELECT * FROM tc;
+
+(DELETE SQL TABLE)
+DELETE tc
+WHERE name="A"
