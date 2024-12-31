@@ -1,0 +1,63 @@
+(FORGIN KEY) 
+CREATE DATBASE bol;
+
+USE bol;
+
+CRATE TABL dept(
+id INT PRIMARY KRY
+mark INT,
+sub VARCHAR(50)
+)
+
+CREATE TABLE tc(
+ID INT PRIMARY KEY,
+mark INT,
+dep_id INT,
+FORGIN KEY dep_id REFERENCE dept(id)
+sub VARCHAR(50)
+);
+
+INSERT INTO tc
+(ID,mark,sub)
+VALUES(1,80,"A"),
+(2,90,"U"),
+(3,100,"N")
+
+
+(CASCADING UPDATE AND DELETE)
+CREATE DATBASE bol;
+
+USE bol;
+
+CRATE TABL dept(
+id INT PRIMARY KRY
+mark INT,
+sub VARCHAR(50)
+)
+INSERT INTO DEPT VALUES
+(1,200,"A"),
+(2,250,"B"),
+(3,280,"V")
+
+UPDATE dept
+SET id=1
+WHERE id=2;
+
+SELECT * FROM dept;
+
+
+CREATE TABLE tc(
+ID INT PRIMARY KEY,
+mark INT,
+dep_id INT,
+FORGIN KEY dep_id REFERENCE dept(id),
+sub VARCHAR(50),
+ON UPDATE CASCADE,
+ON DELTE CASCADE
+);
+
+INSERT INTO tc
+(ID,mark,sub)
+VALUES(1,80,"A"),
+(2,90,"U"),
+(3,100,"N")
