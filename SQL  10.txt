@@ -1,0 +1,92 @@
+CREATE DATABASE xy;
+
+USE xy;
+
+CREATE TABLE kn(
+id INT PRIMARY KEY,
+mark INT);
+
+INSERT INTO Kb VALUES
+(1,200),(2,300);
+
+CREATE TABLE vb(
+id INT PRIMARAY KEY,
+mark INT,
+rollno INT NOT NULL); 
+
+INSERT INTO vb VALUES
+(1,200,30),(2,500,29),(3,600,39)
+
+
+(*INNER JOIN COMMON VALUE)
+SELECT mark 
+FROM
+kb as k
+INNER JOIN vb as v 
+ON k.mark = v.mark
+
+(*Execulisive data join)
+SELECT *
+FROM kb as k
+LEFT JOIN vb as v
+ON kb.id=vb.id
+WHERE vd.id IS NULL;
+
+
+SELECT *
+FROM kb as k
+RIGHT JOIN vb as v
+ON kb.id=vb.id
+WHERE kd.id IS NULL;
+
+
+
+(*SELF JOIN )
+SELECT  k.id , k.mark 
+FROM kb as k
+SELF JOIN kb as v
+ON kb.id=vb.id;
+
+(*UNIN USE SELF TABLE)
+SELECT mark
+FROM kb;
+UNION 
+SELECT mark
+FROM kb;
+
+
+(UNION ALL ALLOW TO CREATE DUPLICATE VALUE)
+SELECT mark
+FROM kb;
+UNION 
+SELECT mark
+FROM kb;
+
+(*LEFT JOIN COMMON VALUE)
+SELECT mark 
+FROM
+kb as k
+LEFT JOIN vb as v 
+ON k.mark = v.mark 
+
+
+(*RIGHT JOIN COMMON VALUE)
+SELECT mark 
+FROM
+kb as k
+RIGHT JOIN vb as v 
+ON k.mark = v.mark
+
+
+(*FULL JOIN COMMON VALUE)
+SELECT mark 
+FROM
+kb as k
+LEFT JOIN vb as v 
+ON k.mark = v.mark
+UNION
+SELECT mark 
+FROM
+kb as k
+RIGHT JOIN vb as v 
+ON k.mark = v.mark
