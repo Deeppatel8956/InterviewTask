@@ -1,0 +1,46 @@
+CREATE DATBASE bol;
+
+USE bol;
+
+
+CREATE TABLE tc(
+ID INT PRIMARY KEY,
+mark INT,
+dep_id INT,
+sub VARCHAR(50)
+);
+
+INSERT INTO tc
+(ID,mark,sub)
+VALUES(1,80,"A"),
+(2,90,"U"),
+(3,100,"N")
+
+SELECT * FROM tc;
+
+(ADD column)
+ALTER TABLE tc
+ADD COLUMN age INT;
+
+
+(DROP COLUMN)
+ALTER TABLE tc
+DROP COLUMN age;
+
+(RENAME COLUMN)
+ALTER TABLE tc
+RENAME TO age_id INT;
+
+(MODIFY COLUMN)
+ALTER TABLE tc
+MODIFY age VARCHAR(2);
+
+(CHANGE COLUMN)
+ALTER TABLE tc
+CHANGE age age_id INT;
+
+
+(TRUNCATE TABLE delete data from table) 
+SELECT*FROM  tc;
+
+TRUNCATE TABLE tc; 
