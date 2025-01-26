@@ -1,0 +1,12 @@
+CREATE DATBASE xyz;
+
+USE xyz;
+
+CREATE TABLE employee(
+id INT PRIMARY KEY,
+name VARCHAR(50),
+salary INT);
+
+INSERT INTO employee VALUES(1,"a",20);
+
+SELECT * FROM employee;
