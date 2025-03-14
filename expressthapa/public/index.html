@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <h1>URLS</h1>
+        <form id="shorted-url" action="/contact" method="post">
+            <div>
+                <label for="url" class="url-labal">name:</label><br>
+                <input type="text" name="user[name]" class="shorted-urled" required>
+            </div>
+            <div>
+                <label for="shorted-Code" class="short-code">message:</label><br>
+                <input type="text" name="user[message]" class="shorted-urled-cutom" required>
+            </div>
+            <button type="submit" class="shorted-btn">Submit</button>
+        </form>
+        <h2>Shorted url</h2>
+        <ul id="Shorted-uellist">
+        </ul>
+    </div>
+</body>
+
+</html>
